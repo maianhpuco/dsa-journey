@@ -8,7 +8,6 @@ class Solution(object):
         while k < n - 2:
             # nums[l]+num[r] = target = - nums[k]; k<l<r<n-2
             l, r = k + 1, n - 1
-            print("- k", k)
 
             while l < r:
                 if nums[l] + nums[r] + nums[k] == 0:
