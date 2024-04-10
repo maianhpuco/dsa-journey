@@ -3,8 +3,12 @@
   Note: curr = head là gán curr vào head nếu thay đổi curr thì head thay đổi theo và ngc lại, trừ phép head = head.next 
 [x] 2. https://leetcode.com/problems/merge-two-sorted-lists/description/
   Note: dùng Dummy
-[] 3. https://leetcode.com/problems/linked-list-cycle/
-[] 4. https://leetcode.com/problems/happy-number/description/ 
+[x] 3. https://leetcode.com/problems/linked-list-cycle/
+  Note: có 2 cách giải: 
+  + C1: dùng mảng lưu vị trí đã traveled qua: dùng array lưu cái node vào (không phải lưu value của cái node thui nhé) 
+  + C2: dùng 2 con trỏ rùa vs thỏ (nhanh vs chậm), nếu có gặp nhau thì chỉ gặp nhau trong vòng thui, rùa đi 1 lần 1 bước, thỏ đi 1 lần 2 bước 
+[] 4. https://leetcode.com/problems/happy-number/description/
+
  
 
 ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/e032cd32-8494-43b1-ae65-0b8ddd0787ba)# Singly Linked List
