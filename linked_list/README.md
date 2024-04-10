@@ -1,8 +1,10 @@
 **Example**: 
 [x] 1. https://leetcode.com/problems/reverse-linked-list/
   Note: curr = head là gán curr vào head nếu thay đổi curr thì head thay đổi theo và ngc lại, trừ phép head = head.next 
+  
 [x] 2. https://leetcode.com/problems/merge-two-sorted-lists/description/
   Note: dùng Dummy
+  
 [] 3. https://leetcode.com/problems/linked-list-cycle/
 [] 4. https://leetcode.com/problems/happy-number/description/ 
  
