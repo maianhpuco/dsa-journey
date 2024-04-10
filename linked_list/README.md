@@ -1,3 +1,12 @@
+**Example**: 
+[x] 1. https://leetcode.com/problems/reverse-linked-list/
+  Note: curr = head là gán curr vào head nếu thay đổi curr thì head thay đổi theo và ngc lại, trừ phép head = head.next 
+[x] 2. https://leetcode.com/problems/merge-two-sorted-lists/description/
+  Note: dùng Dummy
+[] 3. https://leetcode.com/problems/linked-list-cycle/
+[] 4. https://leetcode.com/problems/happy-number/description/ 
+ 
+
 ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/e032cd32-8494-43b1-ae65-0b8ddd0787ba)# Singly Linked List
 
 - Go from left to right
@@ -32,11 +41,6 @@ class Node:
 
 [?] LRUcache là gì ? một chiến lược cache, dùng dsach liên kết đôi mem-catch 
 
-**Example**: 
-1. https://leetcode.com/problems/reverse-linked-list/
-2. https://leetcode.com/problems/merge-two-sorted-lists/description/
-3. https://leetcode.com/problems/linked-list-cycle/
-4. https://leetcode.com/problems/happy-number/description/ 
 
 
 
