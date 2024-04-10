@@ -20,7 +20,7 @@ class Node
 # Double linked list 
 - 2-way traversal
 - Time complexity to update/ insert/ delete = O(k)
-- Application: **LRU cache** 
+- Application: **LRU cache** (list recently used cached) 
 ```python
 class Node:
   def __init__(self, val=0, next_node=None, prev_node=None):
@@ -28,3 +28,7 @@ class Node:
     self.next_node = next_node
     self.prev_node = prev_node 
 ```
+ ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/3e33513e-8bba-468e-a761-a4547169e6c7)
+
+
+
