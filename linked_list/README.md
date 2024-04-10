@@ -257,6 +257,12 @@ if __name__ == "__main__":
     while output:
         print(output.val, end=" ")
         output = output.next
- ``` 
+ ```
+
+2. Dùng Dummy để dễ xóa node:
+   ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/b226e032-bfa5-4377-9585-be85ac7a911d)
+
+
+
 
 
