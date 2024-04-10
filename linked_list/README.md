@@ -30,5 +30,15 @@ class Node:
 ```
  ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/3e33513e-8bba-468e-a761-a4547169e6c7)
 
+[?] LRUcache là gì ? một chiến lược cache, dùng dsach liên kết đôi mem-catch 
+
+**Example**: 
+1. https://leetcode.com/problems/reverse-linked-list/
+2. https://leetcode.com/problems/merge-two-sorted-lists/description/
+3. https://leetcode.com/problems/linked-list-cycle/
+4. https://leetcode.com/problems/happy-number/description/ 
+
+
+
 
 
