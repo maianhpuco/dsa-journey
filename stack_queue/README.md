@@ -1,10 +1,10 @@
 
 # STACK: LIFO: last-in-first-out
-
+Giống quần áo được xếp thành chồng 
 - operation: push(), pop(), peek(), isEmpty(), isFull()
   + push(): move to the stack
   + pop(): take out, on the top 
-  + peak(): just view (not taking out), on the top of Stack, O(1) 
+  + peek(): just view (not taking out), on the top of Stack, O(1) 
   + push / pop : O(1)
   + size: kiểm tra số phần tử trong stack O(1)
     
@@ -25,5 +25,16 @@
   while not stack.isEmpty():
     // do smthing 
   ```
-# QUEUE 
-- 
+# QUEUE: FIFO: fist-in-first-out 
+Giống như xếp hàng order 
+- Các phần tử trược truy cập theo thứ tự được thêm vào
+- Operation (chính):
+  + enqueue
+  + dequeue/peek O(1): peek kiểm tra đầu hàng
+  + isEmpty(), size: O(1)
+- Implementation:
+  + Python: collections.deque; queue.Queue (support Multi-Threading)
+  + C++: queue
+  + Java: java.util.Queue
+    
+
