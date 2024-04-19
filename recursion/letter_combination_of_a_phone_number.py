@@ -22,7 +22,7 @@ class Solution:
         Mỗi vị trí max 4 lựa chọn
         tại mỗi vị trí, cần cân nhắc tiếp các vị trí cho các chỗ đứng sau = slg digit 
         time: gọi len(digits) = l: choosing tốn 4^l và l do join mảng các phần tử vs nhau
-        -> TC = 4^n * n
+        - = > TC = 4^n * n
         space: 0(n) cho current_solution used từng lần vào choose(i)
         '''
         current_solution = []  # vd [a]
