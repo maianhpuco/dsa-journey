@@ -68,6 +68,18 @@ class Solution:
     return ans 
   ```
   
-
+# Dạng 3: Search a target in a sorted array - upper bound: 
+ - Chèn phải nhất, tìm phần tử lớn nhất, bé hơn hoặc bằng target
+```python
+def upperBound(nums, target):
+  left = 0
+  right = len(nums) - 1
+  ans = len(nums)
+  while left <= right:
+    mid = start + (end - start) // 2
+    if nums[mid] > taget:
+      ans = mid
+      right = mid 
+```
 
 
