@@ -79,7 +79,10 @@ def upperBound(nums, target):
     mid = start + (end - start) // 2
     if nums[mid] > taget:
       ans = mid
-      right = mid 
+      right = mid - 1
+    else:
+      left = mid + 1
+  return ans 
 ```
 
 
