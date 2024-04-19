@@ -33,3 +33,41 @@ target=13
 
 ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/c84b5787-13d9-4237-af21-85cebfc20e0e)
 
+```python
+class Solution:
+  def search(self, nums, target):
+    left, right = 0, len(nums)-1
+    while left <= right:
+      mid = (left + right) // 2
+      if nums[mid] == target:
+        return mid
+      elif nums[mid] > target:
+        right = mid -1
+      else:
+        left = mid +1
+    return -1 
+```
+# Dạng 2: Search a target in a sorted array - lower bound: 
+ ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/837ddd01-f11b-4edc-83e6-add3493639c6)
+- Chèn bên trái nhất (mà lớn hơn hoặc bằng target): 
+   ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/4056dd44-08b4-40d6-b057-ea2e39c05063)
+  Implementation:
+  ```python
+  def lowerBound(nums, target):
+    left = 0
+    right = len(nums) - 1
+    ans = len(nums)
+  
+    while left <= right:
+      mid = start + (end - start) // 2
+      if nums[mid] >= target:
+        ans = mid
+        right = mid -1
+      else:
+        left = mid + 1
+    return ans 
+  ```
+  
+
+
+
