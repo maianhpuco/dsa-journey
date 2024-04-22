@@ -85,4 +85,50 @@ def upperBound(nums, target):
   return ans 
 ```
 
+# Using recursive for binary search 
+```python 
+def binary_search(arr, l, r, target):
+  ''' TC = O(logn); SC = O(1) 
+  ''' 
+  #check base case
+  if r >= l:  
+    mid = l + (r - l) // 2
+    if arr[mid] == target:
+      return mid
+    elif arr[mid] < target: 
+      binary_search(arr, mid + 1, r, target)
+    else:
+      binary_search(arr, l, mid - 1, target)
+  else:
+    return -1 
+```
+
+# Sqrt(x) -> trả về số thực
+[?] độ phức tạp của bài này là O(log(46341 // EPSILON) 
+```python 
+def sqrt_float(x):
+  left = 0
+  right = 46341 
+  EPSILON = 1e-9
+  
+  while right - left >= EPSILON:
+    mid = left + (right - left) // 2 
+    if mid * mid == x:
+      return x 
+    elif mid * mid < x:
+      left = x
+    else:
+      right = mid 
+      
+  return left
+```
+
+# Dạng FIRST BAD VERSION 
+
+Một ví dụ bình thường giải O(n),nhưng cũng có thể giải O(logN) 
+ ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/63d35833-ce3d-40e0-b7cb-24920ed7a8b1)
+
+
+ ![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/d78314da-54f0-4ad4-8dbb-fc320f935077)
+
 
