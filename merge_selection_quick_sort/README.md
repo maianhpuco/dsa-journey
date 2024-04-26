@@ -1,6 +1,7 @@
 Merge sort 
 - divide
 - merge
+  
 Template: 
 
   ```python 
@@ -17,7 +18,7 @@ Template:
             i, j = 0, 0 
             res = []
             while i < len(leftSide) and j < len(rightSide): 
-                if leftSide[i] < rightSide[j]:
+                if leftSide[i] < rightSide[j]: #O(k-1) chia m phần mất m^2 để so sánh và merge lại 
                     res.append(leftSide[i])
                     i += 1 
                 else:
@@ -32,5 +33,10 @@ Template:
             return res 
         return mergeSort(nums, 0, len(nums) - 1) 
   ```
+TC: O(nlogn) 
+SC: O(n)
+
+[?] nếu chia thành 3 phần thì complexity là O(nlog_{3}n) (chiều cao của cây là logn) 
+[?] nếu chia thành n phần thì complexity là O(n^2)  
 
   
