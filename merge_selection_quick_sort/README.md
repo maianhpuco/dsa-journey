@@ -89,3 +89,38 @@ class Solution:
                 i += 1  
 ```
 
+Vậy nếu ko phải cờ Hà Lan mà cờ LGBT thì làm thế nào ? swap rất nhiều -> O(n) luôn 
+
+Cách giải tổng quát hơn: 
+```python
+    def sortColors(self, nums: List[int]) -> None: 
+        '''
+        general solution
+        [2, 0, 2, 1, 1, 0] 
+        -> move tất cả số 0 sang trái, 1&2 sang phải 
+        -> move số 1 sang trái 
+        (đưa từng số vào đúng vị trí của nó)
+        l: chặn đầu các số đã đưa về đúng vị trí
+        r: tìm số để bán cho left (l)
+        '''
+        def move_left(nums, left, right, value):
+            while left <= right: #value có thể là 0,1,2 
+                if nums[right] == value:
+                    nums[left], nums[right] = nums[right], nums[left]
+                    left += 1 
+                else:
+                    right -= 1
+            return left 
+        n = len(nums)
+        left = move_left(nums, 0, n-1, 0) 
+        move_left(nums, left , n-1, 1) 
+```
+Cờ k màu chạy k - 1 vòng for: 
+
+![image](https://github.com/maianhpuco/dsa-journey/assets/34562568/38eae28b-2f8c-48d5-9c2a-6d453d06dddc)
+
+TC: Cờ k màu thì phải chạy k - 1 vòng for => complexity là k*n 
+Nếu dùng phép sort: thì chỉ là nlogn 
+
+
+
