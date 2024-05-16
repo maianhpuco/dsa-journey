@@ -19,7 +19,7 @@ TYPE 1: Some example of this example
         if nums[k-1] != nums[i]:
           num[k] = nums[i]
           k+=1
-    return k 
+      return k 
   ```
 - middle of the linked list 
 - linked list cycle 
