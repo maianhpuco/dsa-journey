@@ -24,7 +24,11 @@ TYPE 1: Some example of this example
 - middle of the linked list 
 - linked list cycle 
 
-# Type 2: One Pointing to the Start and One pointing to the end of the arra 
+# Type 2: One Pointing to the Start and One pointing to the end of the array 
+Ví dụ: Cho dãy `n` số nguyên `arr` sắp xếp theo thứ tự tăng dần và số nguyên `target`. Hỏi, có tồn tại 2 phần tử nào trong mảng sao cho tổng của chúng bằng target hay không? Nếu tồn tại trả về chỉ số vị trí của 2 phần tử đó, nếu không thì trả về [-1, -1] 
+
+Note: mảng có sắp xếp, trông có vẻ như là cần vét cạn nhưng nếu dùng cách này có thể tận dụng dc tính đã sắp xếp của mảng.
+
 TYPE 2: One Pointer at the begining and one at the end
 Note: Limit 10^6: can not using n\*n -> TLE in python
 
