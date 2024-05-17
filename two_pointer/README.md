@@ -48,5 +48,65 @@ def two_sum(nums: List[int], target: int) -> List[int]:
   return [-1, -1]    
 ```
 TYPE 2: One Pointer at the beginning and one at the end
-Note: Limit 10^6: can not using n\*n -> TLE in python 
+Note: Limit 10^6: can not using n\*n -> TLE in python
+
+Dạng bài toán tiêu biểu là 2 sum và 3 sum 
+```python
+class Solution(object):
+    def threeSum(self, nums):
+        nums.sort()  # Sort the array first
+        n = len(nums)
+        res = []
+        
+        for k in range(n - 2):
+            # Skip the same element to avoid duplicate triplets
+            if k > 0 and nums[k] == nums[k - 1]:
+                continue
+                
+            target = -nums[k]
+            l, r = k + 1, n - 1
+            
+            while l < r:
+                current_sum = nums[l] + nums[r]
+                if current_sum == target:
+                    res.append([nums[k], nums[l], nums[r]])
+                    
+                    # Skip duplicates for l
+                    while l < r and nums[l] == nums[l + 1]:
+                        l += 1
+                    # Skip duplicates for r
+                    while l < r and nums[r] == nums[r - 1]:
+                        r -= 1
+                        
+                    l += 1
+                    r -= 1
+                elif current_sum < target:
+                    l += 1
+                else:
+                    r -= 1
+        
+        return res 
+```
+3 sum smaller :
+```python
+class Solution:
+    def treeSumSmaller(self, nums, target):
+        k = 0
+        n = len(nums)
+        nums.sort()  # O(sorted)
+        ans = 0
+        while k < n - 2:
+            l, r = k + 1, n - 1
+            while l < r:
+                if nums[l] + nums[r] < target - nums[k]:
+                    ans += r - l  # --> SMART
+                    l += 1  # -> #SMART # các số từ right trổ về trc sẽ thỏa mãn đk đề 
+                else: # các ở right thì dùng left nào cũng ko thỏa mãn đk đề 
+                    r -= 1
+            k += 1
+
+        return ans 
+```
+
+[?] Time complexity * Space complexity của bài toán này là gì (thường 2 sum là N), vì mỗi lần loop mình cập nhật left hoặc right. 
 
