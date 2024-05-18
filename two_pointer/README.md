@@ -110,3 +110,6 @@ class Solution:
 
 [?] Time complexity * Space complexity của bài toán này là gì (thường 2 sum là N), vì mỗi lần loop mình cập nhật left hoặc right. 
 
+# Slicing Window 
+Có 2 con trỏ và 1 biến data 
+2 con trỏ l, r giữ biên của array và biến data curSum giữa giá trị của array
