@@ -110,6 +110,22 @@ class Solution:
 
 [?] Time complexity * Space complexity của bài toán này là gì (thường 2 sum là N), vì mỗi lần loop mình cập nhật left hoặc right. 
 
-# Slicing Window 
+# Slicing Window (hard) 
+
 Có 2 con trỏ và 1 biến data 
 2 con trỏ l, r giữ biên của array và biến data curSum giữa giá trị của array
+Đề bài: Tìm dãy con ngắn nhất có tổng nhỏ hơn hoặc bằng target. 
+
+Ví dụ: [2, 3, 1, 2, 4, 3], target = 7
+Tóm gọn là gồm 2 bước: 
+- Bước 1: Mở rộng biên trái cho đến khi thõa mãn đk >= target
+  left = 0, right = 2;  [2,3,1,2] 
+- Bước 2: sau khi dừng chỉnh LEFT, ta sẽ:
+  check các vị trí trước left cho đến left có dãy nào thỏa mãn dk ko ?
+  + nếu có thì update ans
+  + nếu không thì expand window sang bên phải 1 đơn vị.
+- Tiếp tục quay lại bước 1.
+
+  Note: ý tưởng này là giữ 1 window mà ta chỉ xét bên trong window đó (giữ phải làm gốc, search các vị trí trước nó).
+Window này có ý nghĩa là: Window NHỎ NHẤT (tốt nhất) thỏa mãn điều kiện. (trong quá trình tạo window ta đã xét hết các vị trí phải có thể tạo thành)
+
