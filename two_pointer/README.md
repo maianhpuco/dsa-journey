@@ -129,3 +129,32 @@ Tóm gọn là gồm 2 bước:
   Note: ý tưởng này là giữ 1 window mà ta chỉ xét bên trong window đó (giữ phải làm gốc, search các vị trí trước nó).
 Window này có ý nghĩa là: Window NHỎ NHẤT (tốt nhất) thỏa mãn điều kiện. (trong quá trình tạo window ta đã xét hết các vị trí phải có thể tạo thành)
 
+```python
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        '''
+        - subarray have sum >= target = 10 
+        nums = [2,3,1,2,4,3] 
+        
+        [2,3,1,2],4,3] 
+        left: + update when curr_sum >= target 
+        right: 
+            + change window: update when target is not found            
+        curr_sum 
+        '''
+        min_length = float('inf')
+        l = 0
+        curr_sum = 0 
+
+        for r in range(len(nums)): #update right 
+            curr_sum += nums[r]
+
+            while curr_sum >= target: 
+                min_length = min(min_length, r - l + 1)
+                curr_sum -= nums[l]
+                l += 1 # update left 
+
+        return 0 if min_length == float('inf') else min_length 
+
+ 
+```
